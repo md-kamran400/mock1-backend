@@ -38,7 +38,7 @@ PostRouter.get("/", async (req, res) => {
       .skip(skip)
       .limit(parseInt(pageSize, 10) || 10)
       .exec();
-    res.status(400).json(Posts);
+    res.status(200).json(Posts);
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
